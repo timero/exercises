@@ -26,4 +26,36 @@ h1 {
 
 .faq {
     margin-left: 30px;
+    margin-right: 30px;
+    border-bottom: hsl(240, 5%, 91%) 1px solid;
+}
+
+.question:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+
+
+.response {
+    display: none;
+}
+
+.question::after {
+    content: url("images/icon-arrow-down.svg");
+    display: inline-block;
+    float: right;
+    transition: transform 300ms;
+    
+}
+.faq.selected .question {
+    font-weight: bold;
+}
+
+.faq.selected .question::after {
+    transform: rotate(0.5turn);
+}
+
+.faq.selected .response {
+    display: block;
 }
